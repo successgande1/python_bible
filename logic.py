@@ -23,6 +23,26 @@ else:
     print('Either of the conditions are met')
 
 #The NOT and the AND with brackets (Remember BODMAS and evaluate the conditions in the bracket first)
-if not (car < 10 and bike > 10):
-    print('Either of the conditions are met')
-    
+''' The conditions inside the brackets are evaluated first
+ and if the result is True then the NOT outside the brackets 
+ makes it False and verse versa '''
+if not (car <= 10 and bike > 10):
+    print('Car less than 10 and bike greater than 10')
+else:
+    print('The NOT evaluates the Result otherwise')
+
+#The OR Operator
+''' The OR Logic Gate demands that
+ if Two Conditions are True then it results to True,
+ if one condition is True and another False it evaluated 
+ to True, if 1st condition is False and another True it 
+  evaluates to True, if Two conditions are False then 
+ it evaluates to False'''
+phone = 6
+chair = 4
+#This will print the if conditional message becos one of the conditions is True
+if phone > 6 or chair > 2:
+    print('It worked')
+else:
+    print('It did not work')
+
