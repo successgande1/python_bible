@@ -13,12 +13,22 @@ while True:
     
     #Check if user film choice is available
     if user_film_choice in films_age_tickets:
-        #Accept User Age
+
+        #Request User Age and cast it into integer (Whole Number)
         user_age = int(input('How Old are You?: ').strip())
 
         #Check whether User Age is greater than or equal to the age for the choice film
         if user_age >= films_age_tickets[user_film_choice][0]:
-            print(f'Welcome and Happy Viewing {user_film_choice}')
+
+            #Check for Number of Available Tickets
+            if films_age_tickets[user_film_choice][1] > 0:
+
+                print(f'Have a nice time viewing {user_film_choice}')
+                
+                #Update the Number of Films by minusing the index of age by 1
+                films_age_tickets[user_film_choice][1] = films_age_tickets[user_film_choice][1]-1
+            else:
+                print(f'Sorry! {user_film_choice}, has no available Seats')
         else:
             print(f'You are too young to watch {user_film_choice}')
     else:
