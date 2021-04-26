@@ -20,12 +20,12 @@ while True:
         #Check whether User Age is greater than or equal to the age for the choice film
         if user_age >= films_age_tickets[user_film_choice][0]:
 
-            #Check for Number of Available Tickets
+            #Check for Number of Available Tickets using the dict index
             if films_age_tickets[user_film_choice][1] > 0:
 
                 print(f'Have a nice time viewing {user_film_choice}')
-                
-                #Update the Number of Films by minusing the index of age by 1
+
+                #Update the Number of Films left by minusing the dict index of age by 1
                 films_age_tickets[user_film_choice][1] = films_age_tickets[user_film_choice][1]-1
             else:
                 print(f'Sorry! {user_film_choice}, has no available Seats')
