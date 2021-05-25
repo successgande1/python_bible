@@ -1,4 +1,4 @@
-#Create Account Class
+#Create Abstract Account Class
 class Account:
     #create account constructor method
     def __init__(self, name, balance, min_balance):
@@ -40,14 +40,16 @@ class Savings(Account):
     def __init__(self, name, balance):
         super().__init__(name, balance, min_balance = 0)
 
-gande = Savings('Apollos', 20000)
 
-print(gande)
+Desmond = Current('Emmanuel', 300)
 
-gande.deposit(2500)
-print(gande)
+Desmond.statement()
+print(Desmond)
 
-gande.withdraw(500)
-print(gande)
+Desmond.deposit(500)
 
+print(Desmond)
 
+Desmond.withdraw(1000)
+
+print(Desmond)
