@@ -5,9 +5,10 @@ original = input("Please Enter a Sentence: ").strip().lower()
 words = original.split()
 
 
-#Loop through the words in the sentence and convert to pig latin
+#Create an empty List
 new_word = []
 
+#Loop through the words in the sentence and convert to pig latin
 for word in words:
     #check if the first letter of the word is a vowel
     if word[0] in 'aeiou':
