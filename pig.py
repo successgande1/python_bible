@@ -30,10 +30,6 @@ for word in words:
         new_word.append(new_words)
 
 
-#print(new_word)
-
-
-
 #stick the words together by using the join() string method
 output = " ".join(new_word)
 
